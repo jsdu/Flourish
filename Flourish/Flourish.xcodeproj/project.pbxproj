@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		27FC9225BE1A3267D3645A06 /* Pods_Flourish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */; };
+		392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545DE1F9C007C0093709E /* LoanViewController.swift */; };
+		392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545E21F9C00E80093709E /* LoanInProgressCell.swift */; };
+		392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545E51F9C01020093709E /* LoanDashBoardCell.swift */; };
+		392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545E81F9C011C0093709E /* LoanHeaderCell.swift */; };
+		392545EB1F9C013E0093709E /* LoanCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545EA1F9C013E0093709E /* LoanCompleteCell.swift */; };
 		39AF82661F9BD24F00000706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AF82651F9BD24F00000706 /* AppDelegate.swift */; };
 		39AF826B1F9BD24F00000706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AF82691F9BD24F00000706 /* Main.storyboard */; };
 		39AF826D1F9BD24F00000706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AF826C1F9BD24F00000706 /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 
 /* Begin PBXFileReference section */
 		2C71F2BA085E7328659CE3B0 /* Pods-Flourish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.debug.xcconfig"; sourceTree = "<group>"; };
+		392545DE1F9C007C0093709E /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
+		392545E21F9C00E80093709E /* LoanInProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanInProgressCell.swift; sourceTree = "<group>"; };
+		392545E51F9C01020093709E /* LoanDashBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDashBoardCell.swift; sourceTree = "<group>"; };
+		392545E81F9C011C0093709E /* LoanHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanHeaderCell.swift; sourceTree = "<group>"; };
+		392545EA1F9C013E0093709E /* LoanCompleteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCompleteCell.swift; sourceTree = "<group>"; };
 		39AF82621F9BD24F00000706 /* Flourish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flourish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39AF82651F9BD24F00000706 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39AF826A1F9BD24F00000706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -38,6 +48,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		392545E01F9C00810093709E /* LoanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				392545E11F9C00B00093709E /* Cells */,
+				392545DE1F9C007C0093709E /* LoanViewController.swift */,
+			);
+			path = LoanViewController;
+			sourceTree = "<group>";
+		};
+		392545E11F9C00B00093709E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				392545E51F9C01020093709E /* LoanDashBoardCell.swift */,
+				392545E21F9C00E80093709E /* LoanInProgressCell.swift */,
+				392545E81F9C011C0093709E /* LoanHeaderCell.swift */,
+				392545EA1F9C013E0093709E /* LoanCompleteCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		39AF82591F9BD24F00000706 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +91,7 @@
 			children = (
 				39AF82651F9BD24F00000706 /* AppDelegate.swift */,
 				39AF82691F9BD24F00000706 /* Main.storyboard */,
+				392545E01F9C00810093709E /* LoanViewController */,
 				39AF826C1F9BD24F00000706 /* Assets.xcassets */,
 				39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */,
 				39AF82711F9BD24F00000706 /* Info.plist */,
@@ -208,7 +239,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */,
+				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
+				392545EB1F9C013E0093709E /* LoanCompleteCell.swift in Sources */,
 				39AF82661F9BD24F00000706 /* AppDelegate.swift in Sources */,
+				392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */,
+				392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
