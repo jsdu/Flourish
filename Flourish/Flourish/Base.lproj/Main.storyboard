@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="198" y="675"/>
         </scene>
-        <!--View Controller-->
+        <!--Loan View Controller-->
         <scene sceneID="5rA-TB-qfv">
             <objects>
-                <viewController id="LLa-HR-Uo6" sceneMemberID="viewController">
+                <viewController id="LLa-HR-Uo6" customClass="LoanViewController" customModule="Flourish" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1zG-un-abw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="195" id="eLF-vP-XVp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDashBoardCell" rowHeight="195" id="eLF-vP-XVp" customClass="LoanDashBoardCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="195"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eLF-vP-XVp" id="mf2-ZU-1wP">
@@ -100,8 +100,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPEN LOANS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XF0-L8-qEb">
-                                                    <rect key="frame" x="8" y="166" width="66" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                    <rect key="frame" x="8" y="164.5" width="83.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -141,7 +141,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="160" id="fDw-Sv-YDi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanInProgressCell" rowHeight="160" id="fDw-Sv-YDi" customClass="LoanInProgressCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="223" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fDw-Sv-YDi" id="Ofy-aM-kCv">
@@ -344,16 +344,16 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="30" id="q1k-PL-OOH">
-                                        <rect key="frame" x="0.0" y="383" width="375" height="30"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanHeaderCell" rowHeight="40" id="q1k-PL-OOH" customClass="LoanHeaderCell" customModule="Flourish" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="383" width="375" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q1k-PL-OOH" id="7iw-Mh-GR2">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLOSED LOANS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oB8-eH-kIj">
-                                                    <rect key="frame" x="8" y="9" width="78.5" height="12"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="10"/>
+                                                    <rect key="frame" x="8" y="12" width="99.5" height="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -365,8 +365,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="129" id="7uO-tY-pfb">
-                                        <rect key="frame" x="0.0" y="413" width="375" height="129"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanCompleteCell" rowHeight="129" id="7uO-tY-pfb" customClass="LoanCompleteCell" customModule="Flourish" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="423" width="375" height="129"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7uO-tY-pfb" id="jMu-ex-yuO">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="129"/>
@@ -459,6 +459,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="LLa-HR-Uo6" id="uFo-bf-EEg"/>
+                                    <outlet property="delegate" destination="LLa-HR-Uo6" id="su0-Ob-TtV"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -471,6 +475,9 @@
                         <viewLayoutGuide key="safeArea" id="vvb-I2-lOa"/>
                     </view>
                     <navigationItem key="navigationItem" id="BT5-Ba-u6A"/>
+                    <connections>
+                        <outlet property="tableView" destination="wGn-Ph-XYl" id="yoO-RI-LLy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09E-FQ-3gG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
