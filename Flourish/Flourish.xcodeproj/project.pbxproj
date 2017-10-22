@@ -32,6 +32,13 @@
 		39AF826C1F9BD24F00000706 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		39AF826F1F9BD24F00000706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39AF82711F9BD24F00000706 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39BEADAE1F9C2B130011D878 /* Animatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animatable.swift; sourceTree = "<group>"; };
+		39BEADAF1F9C2B130011D878 /* ViewAnimatorConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimatorConfig.swift; sourceTree = "<group>"; };
+		39BEADB01F9C2B150011D878 /* ViewAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimator.swift; sourceTree = "<group>"; };
+		39BEADB11F9C2B150011D878 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		39BEADB21F9C2B160011D878 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		39BEADB31F9C2B160011D878 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		39BEADB41F9C2B160011D878 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		3BD2B171AC416824913249C5 /* Pods-Flourish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.release.xcconfig"; sourceTree = "<group>"; };
 		8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flourish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -75,6 +82,20 @@
 			path = LoanDetailViewController;
 			sourceTree = "<group>";
 		};
+		392545ED1F9C2AB80093709E /* 3rdParty */ = {
+			isa = PBXGroup;
+			children = (
+				39BEADAE1F9C2B130011D878 /* Animatable.swift */,
+				39BEADB21F9C2B160011D878 /* Animation.swift */,
+				39BEADB41F9C2B160011D878 /* AnimationType.swift */,
+				39BEADB11F9C2B150011D878 /* Direction.swift */,
+				39BEADB31F9C2B160011D878 /* Utilities.swift */,
+				39BEADB01F9C2B150011D878 /* ViewAnimator.swift */,
+				39BEADAF1F9C2B130011D878 /* ViewAnimatorConfig.swift */,
+			);
+			path = 3rdParty;
+			sourceTree = "<group>";
+		};
 		39AF82591F9BD24F00000706 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +117,7 @@
 		39AF82641F9BD24F00000706 /* Flourish */ = {
 			isa = PBXGroup;
 			children = (
+				392545ED1F9C2AB80093709E /* 3rdParty */,
 				39AF82651F9BD24F00000706 /* AppDelegate.swift */,
 				39AF82691F9BD24F00000706 /* Main.storyboard */,
 				392545E01F9C00810093709E /* LoanViewController */,

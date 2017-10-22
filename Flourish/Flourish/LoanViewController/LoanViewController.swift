@@ -14,9 +14,20 @@ class LoanViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let loanInProgressArr = ["",""]
     let loanCompleteArr = ["","",""]
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } 
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
     }
 }
 
@@ -60,3 +71,11 @@ extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
+
+extension UINavigationController
+{
+    override open var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
