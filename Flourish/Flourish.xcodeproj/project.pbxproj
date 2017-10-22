@@ -17,6 +17,7 @@
 		39AF826B1F9BD24F00000706 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AF82691F9BD24F00000706 /* Main.storyboard */; };
 		39AF826D1F9BD24F00000706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AF826C1F9BD24F00000706 /* Assets.xcassets */; };
 		39AF82701F9BD24F00000706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */; };
+		39BEADB71F9C2BE30011D878 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB61F9C2BE30011D878 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		39BEADB21F9C2B160011D878 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		39BEADB31F9C2B160011D878 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		39BEADB41F9C2B160011D878 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
+		39BEADB61F9C2BE30011D878 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3BD2B171AC416824913249C5 /* Pods-Flourish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.release.xcconfig"; sourceTree = "<group>"; };
 		8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flourish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 		39AF82641F9BD24F00000706 /* Flourish */ = {
 			isa = PBXGroup;
 			children = (
+				39BEADB51F9C2BB90011D878 /* Network */,
 				392545ED1F9C2AB80093709E /* 3rdParty */,
 				39AF82651F9BD24F00000706 /* AppDelegate.swift */,
 				39AF82691F9BD24F00000706 /* Main.storyboard */,
@@ -127,6 +130,15 @@
 				39AF82711F9BD24F00000706 /* Info.plist */,
 			);
 			path = Flourish;
+			sourceTree = "<group>";
+		};
+		39BEADB51F9C2BB90011D878 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				39BEADB61F9C2BE30011D878 /* Network.swift */,
+			);
+			name = Network;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		58EDA8C4FCF6D3E502190FAB /* Frameworks */ = {
@@ -274,6 +286,7 @@
 				392545EB1F9C013E0093709E /* LoanCompleteCell.swift in Sources */,
 				39AF82661F9BD24F00000706 /* AppDelegate.swift in Sources */,
 				392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */,
+				39BEADB71F9C2BE30011D878 /* Network.swift in Sources */,
 				392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

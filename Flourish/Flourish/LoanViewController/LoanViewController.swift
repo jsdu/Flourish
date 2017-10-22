@@ -24,6 +24,9 @@ class LoanViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        Network.createUser(success: { _ in
+            print("LOL")
+        })
         tableView.reloadData()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
