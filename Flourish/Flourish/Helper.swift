@@ -69,3 +69,20 @@ extension String {
         return formatter.string(from: number)!
     }
 }
+
+class FakeNames {
+    static let boyArr = ["Rob", "Nicky", "Rupert", "Ignacio", "Lucio", "Jay", "Neville", "Xavier", "Santos", "Dominic", "Reinaldo", "Roger", "Felipe", "Dudley", "Antonia", "Frederick", "Landon", "Johnnie", "Sanford", "Gregory", "Huey", "Jacques", "Samuel", "Chadwick", "Heath", "Deangelo", "Barry", "Lupe", "Lester", "Zackary"]
+
+    static let girlArr = ["Kaylene","Edith","Kristal","Priscila","Sherika","Ada","Alisha", "Regan","Leonarda","Kenisha","Zulema","Fransisca","Zita","Pearlie","Lakeisha","Geralyn","Magda", "April","Markita","Laurice","Yuri", "Raquel",
+        "Zetta","Kyoko","Vergie","Stephani","Betty","Charlene","Annemarie"]
+
+    static func generateGirl() -> String {
+       let index = Int(arc4random_uniform(UInt32(girlArr.count)))
+        return girlArr[index]
+    }
+
+    static func generateBoy() -> String {
+        let index = Int(arc4random_uniform(UInt32(boyArr.count)))
+        return boyArr[index]
+    }
+}

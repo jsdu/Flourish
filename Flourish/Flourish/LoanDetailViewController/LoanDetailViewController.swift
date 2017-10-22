@@ -104,22 +104,25 @@ extension LoanDetailViewController: UITableViewDelegate, UITableViewDataSource {
             if !isComplete(slot: data.slots[indexPath.row]) {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
                 cell.slot = data.slots[indexPath.row]
+                cell.weekLabel.text = "Week \(indexPath.row + 1)"
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell
+                cell.slot = data.slots[indexPath.row]
                 return cell
             }
-        } else if indexPath.row < paymentIndex + offset && indexPath.row >= paymentIndex {
-            if indexPath.row == paymentIndex {
+        } else if indexPath.row == paymentIndex {
                 if isComplete(slot: data.slots[indexPath.row]) {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell
+                    cell.slot = data.slots[indexPath.row]
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
                     cell.slot = data.slots[indexPath.row]
+                    cell.weekLabel.text = "Week \(indexPath.row + 1)"
                     return cell
                 }
-            } else {
+        } else if indexPath.row < paymentIndex + offset {
                 if isComplete(slot: data.slots[paymentIndex]) {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsCell") as! LoanDetailsCell
                     cell.slot = data.slots[paymentIndex]
@@ -127,16 +130,19 @@ extension LoanDetailViewController: UITableViewDelegate, UITableViewDataSource {
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
                     cell.slot = data.slots[paymentIndex]
+                    cell.weekLabel.text = "Week \(indexPath.row + 1)"
                     return cell
                 }
-            }
         } else {
             if !isComplete(slot: data.slots[indexPath.row - offset]) {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
                 cell.slot = data.slots[indexPath.row - offset]
+                cell.weekLabel.text = "Week \(indexPath.row - offset)"
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell
+                cell.slot = data.slots[indexPath.row - offset]
+                print("\(indexPath.row) - \(offset)")
                 return cell
             }
         }

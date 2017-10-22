@@ -34,6 +34,12 @@ class LoanDetailsCell: UITableViewCell {
                     acceptButton.setTitleColor(Theme.darkBlue, for: .normal)
                 }
             }
+            if profilePicture.image == nil {
+                profilePicture.image = UIImage(named: "girl\(Int(arc4random_uniform(10)) + 1)")
+            }
+            if nameLabel.text == "" {
+                nameLabel.text = FakeNames.generateGirl()
+            }
             payAmountLabel.text = "+ $\(slot.netAmount / 4).00"
             dateLabel.text = slot.settledBy
         }
