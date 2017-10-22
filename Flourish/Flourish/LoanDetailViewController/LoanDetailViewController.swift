@@ -103,6 +103,7 @@ extension LoanDetailViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row < paymentIndex {
             if !isComplete(slot: data.slots[indexPath.row]) {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell

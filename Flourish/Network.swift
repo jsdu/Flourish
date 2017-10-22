@@ -47,7 +47,7 @@ open class Network {
                                     var loanStatus: String? = nil
                                     var settlementHash: String? = nil
                                     var settleReason: String? = nil
-                                    var settledWith: String? = nil
+                                    var settledWith: [String] = []
 
                                     if let testSettleBy = slot["settleBy"].string {
                                         settledBy = testSettleBy
@@ -71,8 +71,12 @@ open class Network {
 
                                     guard let netAmount = slot["netAmount"].int else { return }
 
-                                    if let testSettledWith = slot["settledWith"].string {
-                                        settledWith = testSettledWith
+                                    if let testSettledWith = slot["settledWith"].array {
+                                        for person in testSettledWith {
+                                            if let strPerson = person.string {
+                                                settledWith.append(strPerson)
+                                            }
+                                        }
                                     }
 
                                     slotsArr.append(Slot(settledBy: settledBy, settledOn: settledOn, loanStatus: loanStatus, settlementHash: settlementHash, settleReason: settleReason, settledWith: settledWith, netAmount: netAmount))
@@ -90,7 +94,7 @@ open class Network {
     }
 
     open class func createLoan(success: @escaping SuccessBlock) {
-        let parameters: Parameters = ["query": "mutation createLoan { createLoan }"]
+        let parameters: Parameters = ["query": "{ createLoan }"]
 
         Alamofire.request(base, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             success(response)

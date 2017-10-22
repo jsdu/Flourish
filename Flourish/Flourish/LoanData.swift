@@ -29,6 +29,6 @@ struct Slot {
     var loanStatus: String?
     var settlementHash: String?
     var settleReason: String?
-    var settledWith: String?
+    var settledWith: [String]
     var netAmount: Int
 }
