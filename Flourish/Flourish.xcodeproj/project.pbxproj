@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27FC9225BE1A3267D3645A06 /* Pods_Flourish.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */; };
+		3920C7421F9C61C100586CC6 /* AddLoanDisabledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920C7411F9C61C100586CC6 /* AddLoanDisabledCell.swift */; };
+		3920C7451F9C655700586CC6 /* AddLoanConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920C7441F9C655700586CC6 /* AddLoanConfirmationViewController.swift */; };
 		392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545DE1F9C007C0093709E /* LoanViewController.swift */; };
 		392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545E21F9C00E80093709E /* LoanInProgressCell.swift */; };
 		392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545E51F9C01020093709E /* LoanDashBoardCell.swift */; };
@@ -32,10 +34,14 @@
 		39C577A71F9C3DD6002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
 		39C577A81F9C3DD8002EA512 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */; };
 		39C577AB1F9C4AEC002EA512 /* AddLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */; };
+		39C577AF1F9C5E43002EA512 /* AddLoanHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577AE1F9C5E43002EA512 /* AddLoanHeaderCell.swift */; };
+		39C577B11F9C5E53002EA512 /* AddLoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577B01F9C5E53002EA512 /* AddLoanCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C71F2BA085E7328659CE3B0 /* Pods-Flourish.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.debug.xcconfig"; sourceTree = "<group>"; };
+		3920C7411F9C61C100586CC6 /* AddLoanDisabledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanDisabledCell.swift; sourceTree = "<group>"; };
+		3920C7441F9C655700586CC6 /* AddLoanConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanConfirmationViewController.swift; sourceTree = "<group>"; };
 		392545DE1F9C007C0093709E /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
 		392545E21F9C00E80093709E /* LoanInProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanInProgressCell.swift; sourceTree = "<group>"; };
 		392545E51F9C01020093709E /* LoanDashBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDashBoardCell.swift; sourceTree = "<group>"; };
@@ -62,6 +68,8 @@
 		39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanViewController.swift; sourceTree = "<group>"; };
+		39C577AE1F9C5E43002EA512 /* AddLoanHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanHeaderCell.swift; sourceTree = "<group>"; };
+		39C577B01F9C5E53002EA512 /* AddLoanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanCell.swift; sourceTree = "<group>"; };
 		3BD2B171AC416824913249C5 /* Pods-Flourish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.release.xcconfig"; sourceTree = "<group>"; };
 		8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flourish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3920C7431F9C653B00586CC6 /* AddLoanConfirmationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3920C7441F9C655700586CC6 /* AddLoanConfirmationViewController.swift */,
+			);
+			path = AddLoanConfirmationViewController;
+			sourceTree = "<group>";
+		};
 		392545E01F9C00810093709E /* LoanViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +161,7 @@
 				392545E01F9C00810093709E /* LoanViewController */,
 				392545EC1F9C1DDF0093709E /* LoanDetailViewController */,
 				39C577AC1F9C4AF3002EA512 /* AddLoanViewController */,
+				3920C7431F9C653B00586CC6 /* AddLoanConfirmationViewController */,
 				39AF826C1F9BD24F00000706 /* Assets.xcassets */,
 				39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */,
 				39AF82711F9BD24F00000706 /* Info.plist */,
@@ -204,9 +221,20 @@
 		39C577AC1F9C4AF3002EA512 /* AddLoanViewController */ = {
 			isa = PBXGroup;
 			children = (
+				39C577AD1F9C5E20002EA512 /* Cells */,
 				39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */,
 			);
 			path = AddLoanViewController;
+			sourceTree = "<group>";
+		};
+		39C577AD1F9C5E20002EA512 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				39C577AE1F9C5E43002EA512 /* AddLoanHeaderCell.swift */,
+				39C577B01F9C5E53002EA512 /* AddLoanCell.swift */,
+				3920C7411F9C61C100586CC6 /* AddLoanDisabledCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		58EDA8C4FCF6D3E502190FAB /* Frameworks */ = {
@@ -355,14 +383,17 @@
 				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
 				39C577A41F9C3DCA002EA512 /* ViewAnimator.swift in Sources */,
 				39C577A31F9C3DC7002EA512 /* Utilities.swift in Sources */,
+				39C577AF1F9C5E43002EA512 /* AddLoanHeaderCell.swift in Sources */,
 				392545EB1F9C013E0093709E /* LoanCompleteCell.swift in Sources */,
 				39C577A61F9C3DD3002EA512 /* SkyFloatingLabelTextField.swift in Sources */,
 				39AF82661F9BD24F00000706 /* AppDelegate.swift in Sources */,
 				39C577A11F9C3DC3002EA512 /* AnimationType.swift in Sources */,
 				39C577A51F9C3DCD002EA512 /* ViewAnimatorConfig.swift in Sources */,
 				39C577A81F9C3DD8002EA512 /* UITextField+fixCaretPosition.swift in Sources */,
+				3920C7451F9C655700586CC6 /* AddLoanConfirmationViewController.swift in Sources */,
 				392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */,
 				39C577A21F9C3DC5002EA512 /* Direction.swift in Sources */,
+				3920C7421F9C61C100586CC6 /* AddLoanDisabledCell.swift in Sources */,
 				39C5779F1F9C3DBE002EA512 /* Animatable.swift in Sources */,
 				39C577941F9C374C002EA512 /* LoanDetailViewController.swift in Sources */,
 				39C577A71F9C3DD6002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
@@ -370,6 +401,7 @@
 				39BEADB71F9C2BE30011D878 /* Network.swift in Sources */,
 				39C577A01F9C3DC1002EA512 /* Animation.swift in Sources */,
 				392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */,
+				39C577B11F9C5E53002EA512 /* AddLoanCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

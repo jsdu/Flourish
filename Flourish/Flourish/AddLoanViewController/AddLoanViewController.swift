@@ -26,6 +26,7 @@ class AddLoanViewController: UIViewController {
     let loanDataArr = ["$100.00", "$200.00", "$400.00", "$800.00"]
 
     @IBOutlet weak var interestSwitch: UISwitch!
+    @IBOutlet weak var searchButton: UIButton!
 
     override func viewDidLoad() {
         formatNavBar()
@@ -34,11 +35,10 @@ class AddLoanViewController: UIViewController {
         formatPicker()
     }
 
-    func checkFormDone() {
-        if loanAmountTextField.text != "" && startingDateTextField.text != "" && purposeTextField.text != "" {
-            print("Form Done")
-        }
+    @IBAction func searchPressed(_ sender: Any) {
+
     }
+
 }
 
 // Formatting
@@ -85,7 +85,6 @@ extension AddLoanViewController {
     @objc func loanAmountPickerDonePressed() {
         loanAmountTextField.text = loanDataArr[loanAmountPicker.selectedRow(inComponent: 0)]
         self.view.endEditing(true)
-        checkFormDone()
     }
 
     @objc func dateTextFieldDonePressed() {
@@ -95,7 +94,6 @@ extension AddLoanViewController {
         let dateString = formatter.string(from: datePicker.date)
         startingDateTextField.text = dateString
         self.view.endEditing(true)
-        checkFormDone()
     }
 }
 
