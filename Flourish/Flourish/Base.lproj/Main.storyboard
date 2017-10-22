@@ -899,7 +899,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nI0-mX-xRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1108" y="-93"/>
+            <point key="canvasLocation" x="926" y="-243"/>
         </scene>
         <!--Add a loan-->
         <scene sceneID="s33-vo-0lb">
@@ -1148,7 +1148,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="220" id="tgx-Go-9Pd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddLoanConfirmationHeaderCell" rowHeight="220" id="tgx-Go-9Pd" customClass="AddLoanConfirmationHeaderCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tgx-Go-9Pd" id="T6y-LE-Fya">
@@ -1240,8 +1240,13 @@
                                                 <constraint firstAttribute="bottom" secondItem="C5y-bg-wHZ" secondAttribute="bottom" id="TjZ-Ja-LK8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="FFW-fV-ujA" id="Bdg-Wu-zap"/>
+                                            <outlet property="paymentLabel" destination="k3B-sH-9VQ" id="WZj-LY-Qt0"/>
+                                            <outlet property="purposeLabel" destination="zX9-qE-GC6" id="paA-Ac-yoS"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HmR-AS-blu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddLoanConfirmationCell" id="HmR-AS-blu" customClass="AddLoanConfirmationCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="248" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HmR-AS-blu" id="n0Y-UB-aVT">
@@ -1268,6 +1273,10 @@
                                                 <constraint firstItem="oEz-JV-ehd" firstAttribute="centerY" secondItem="n0Y-UB-aVT" secondAttribute="centerY" id="qEo-5X-O48"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="amountLabel" destination="oEz-JV-ehd" id="YUk-vE-5XZ"/>
+                                            <outlet property="dateLabel" destination="nGN-Gd-j8m" id="gMP-T5-8gM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

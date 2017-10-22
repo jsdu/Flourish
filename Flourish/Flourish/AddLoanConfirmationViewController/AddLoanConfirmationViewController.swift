@@ -16,7 +16,12 @@ class AddLoanConfirmationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
-        
+        let systemBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneNavBar))
+        navigationItem.rightBarButtonItem = systemBarButtonItem
+    }
+
+    @objc func doneNavBar() {
+        self.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -30,9 +35,24 @@ extension AddLoanConfirmationViewController: UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let tableArr = data?.tableArr {
+        if let data = data, let tableArr = data.tableArr {
             if indexPath.row == 0 {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "") as! AddLoan
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AddLoanConfirmationHeaderCell") as! AddLoanConfirmationHeaderCell
+                cell.purposeLabel.text = data.purpose!
+                cell.dateLabel.text = ""
+                cell.paymentLabel.text = data.loanAmount!
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "AddLoanConfirmationCell") as! AddLoanConfirmationCell
+
+                if indexPath.row == 3 {
+                    cell.amountLabel.text = "+ $200.00"
+                } else {
+                    cell.amountLabel.text = "- $50.00"
+                }
+
+                cell.dateLabel.text = tableArr[indexPath.row - 1].date
+                return cell
             }
         } else {
             return UITableViewCell()
@@ -40,6 +60,14 @@ extension AddLoanConfirmationViewController: UITableViewDelegate, UITableViewDat
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60.0
+        if let _ = data?.tableArr {
+            if indexPath.row == 0 {
+                return 220.0
+            } else {
+                return 40.0
+            }
+        } else {
+            return 0.0
+        }
     }
 }

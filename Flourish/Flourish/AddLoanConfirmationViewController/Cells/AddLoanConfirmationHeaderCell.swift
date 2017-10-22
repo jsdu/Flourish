@@ -11,4 +11,8 @@ import UIKit
 
 class AddLoanConfirmationHeaderCell: UITableViewCell {
     
+    @IBOutlet weak var purposeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var paymentLabel: UILabel!
+    
 }
