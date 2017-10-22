@@ -58,7 +58,7 @@ extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 200.0
+            return 220.0
         } else if indexPath.row <= loanInProgressArr.count  {
             return 250.0
         } else if indexPath.row == loanInProgressArr.count + 1 {

@@ -21,6 +21,16 @@
 		39C577941F9C374C002EA512 /* LoanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577931F9C374C002EA512 /* LoanDetailViewController.swift */; };
 		39C577961F9C37DD002EA512 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577951F9C37DD002EA512 /* Theme.swift */; };
 		39C5779A1F9C3829002EA512 /* EZYGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577991F9C3829002EA512 /* EZYGradientView.swift */; };
+		39C5779F1F9C3DBE002EA512 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADAE1F9C2B130011D878 /* Animatable.swift */; };
+		39C577A01F9C3DC1002EA512 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB21F9C2B160011D878 /* Animation.swift */; };
+		39C577A11F9C3DC3002EA512 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB41F9C2B160011D878 /* AnimationType.swift */; };
+		39C577A21F9C3DC5002EA512 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB11F9C2B150011D878 /* Direction.swift */; };
+		39C577A31F9C3DC7002EA512 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB31F9C2B160011D878 /* Utilities.swift */; };
+		39C577A41F9C3DCA002EA512 /* ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB01F9C2B150011D878 /* ViewAnimator.swift */; };
+		39C577A51F9C3DCD002EA512 /* ViewAnimatorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADAF1F9C2B130011D878 /* ViewAnimatorConfig.swift */; };
+		39C577A61F9C3DD3002EA512 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779C1F9C398E002EA512 /* SkyFloatingLabelTextField.swift */; };
+		39C577A71F9C3DD6002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		39C577A81F9C3DD8002EA512 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -323,12 +333,22 @@
 				39C577961F9C37DD002EA512 /* Theme.swift in Sources */,
 				392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */,
 				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
+				39C577A41F9C3DCA002EA512 /* ViewAnimator.swift in Sources */,
+				39C577A31F9C3DC7002EA512 /* Utilities.swift in Sources */,
 				392545EB1F9C013E0093709E /* LoanCompleteCell.swift in Sources */,
+				39C577A61F9C3DD3002EA512 /* SkyFloatingLabelTextField.swift in Sources */,
 				39AF82661F9BD24F00000706 /* AppDelegate.swift in Sources */,
+				39C577A11F9C3DC3002EA512 /* AnimationType.swift in Sources */,
+				39C577A51F9C3DCD002EA512 /* ViewAnimatorConfig.swift in Sources */,
+				39C577A81F9C3DD8002EA512 /* UITextField+fixCaretPosition.swift in Sources */,
 				392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */,
+				39C577A21F9C3DC5002EA512 /* Direction.swift in Sources */,
+				39C5779F1F9C3DBE002EA512 /* Animatable.swift in Sources */,
 				39C577941F9C374C002EA512 /* LoanDetailViewController.swift in Sources */,
+				39C577A71F9C3DD6002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				39C5779A1F9C3829002EA512 /* EZYGradientView.swift in Sources */,
 				39BEADB71F9C2BE30011D878 /* Network.swift in Sources */,
+				39C577A01F9C3DC1002EA512 /* Animation.swift in Sources */,
 				392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

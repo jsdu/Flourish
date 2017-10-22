@@ -12,8 +12,15 @@ import UIKit
 class LoanDashBoardCell: UITableViewCell {
     
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var gradientView: EZYGradientView!
 
     override func layoutSubviews() {
         addButton.layer.cornerRadius = addButton.frame.height / 2
+
+        gradientView.firstColor = Theme.lightBlue
+        gradientView.secondColor = Theme.darkBlue
+        gradientView.angleº = 70
+        gradientView.fadeIntensity = 1
+        gradientView.colorRatio = 0.5
     }
 }
