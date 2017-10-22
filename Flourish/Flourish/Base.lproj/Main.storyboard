@@ -467,6 +467,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cardView" destination="RrU-IV-LbK" id="hsA-aN-6NB"/>
+                                            <outlet property="headerView" destination="mVM-xB-Bk4" id="y7p-e7-Fcj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -893,7 +894,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nI0-mX-xRP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="-243"/>
+            <point key="canvasLocation" x="926" y="-243"/>
         </scene>
     </scenes>
 </document>

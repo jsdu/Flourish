@@ -16,7 +16,8 @@ class LoanDashBoardCell: UITableViewCell {
 
     override func layoutSubviews() {
         addButton.layer.cornerRadius = addButton.frame.height / 2
-
+        addButton.backgroundColor = Theme.darkBlue
+        
         gradientView.firstColor = Theme.lightBlue
         gradientView.secondColor = Theme.darkBlue
         gradientView.angleº = 70

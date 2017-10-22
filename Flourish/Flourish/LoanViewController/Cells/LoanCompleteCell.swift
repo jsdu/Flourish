@@ -12,11 +12,14 @@ import UIKit
 class LoanCompleteCell: UITableViewCell {
 
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var headerView: UIView!
 
     override func layoutSubviews() {
         cardView.layer.cornerRadius = 10
         cardView.layer.shadowRadius = 2
         cardView.layer.shadowOffset = CGSize(width: 0, height: 3)
         cardView.layer.shadowOpacity = 0.2
+
+        headerView.backgroundColor = Theme.darkBlue
     }
 }
