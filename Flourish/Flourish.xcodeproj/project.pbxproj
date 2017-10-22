@@ -19,7 +19,7 @@
 		39AF82701F9BD24F00000706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */; };
 		39BEADB71F9C2BE30011D878 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB61F9C2BE30011D878 /* Network.swift */; };
 		39C577941F9C374C002EA512 /* LoanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577931F9C374C002EA512 /* LoanDetailViewController.swift */; };
-		39C577961F9C37DD002EA512 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577951F9C37DD002EA512 /* Theme.swift */; };
+		39C577961F9C37DD002EA512 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577951F9C37DD002EA512 /* Helper.swift */; };
 		39C5779A1F9C3829002EA512 /* EZYGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577991F9C3829002EA512 /* EZYGradientView.swift */; };
 		39C5779F1F9C3DBE002EA512 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADAE1F9C2B130011D878 /* Animatable.swift */; };
 		39C577A01F9C3DC1002EA512 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB21F9C2B160011D878 /* Animation.swift */; };
@@ -56,7 +56,7 @@
 		39BEADB41F9C2B160011D878 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		39BEADB61F9C2BE30011D878 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		39C577931F9C374C002EA512 /* LoanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailViewController.swift; sourceTree = "<group>"; };
-		39C577951F9C37DD002EA512 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		39C577951F9C37DD002EA512 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		39C577991F9C3829002EA512 /* EZYGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZYGradientView.swift; sourceTree = "<group>"; };
 		39C5779C1F9C398E002EA512 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 				39AF826C1F9BD24F00000706 /* Assets.xcassets */,
 				39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */,
 				39AF82711F9BD24F00000706 /* Info.plist */,
-				39C577951F9C37DD002EA512 /* Theme.swift */,
+				39C577951F9C37DD002EA512 /* Helper.swift */,
 			);
 			path = Flourish;
 			sourceTree = "<group>";
@@ -349,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39C577961F9C37DD002EA512 /* Theme.swift in Sources */,
+				39C577961F9C37DD002EA512 /* Helper.swift in Sources */,
 				392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */,
 				39C577AB1F9C4AEC002EA512 /* AddLoanViewController.swift in Sources */,
 				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
