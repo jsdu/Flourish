@@ -92,7 +92,7 @@ extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
             } else if indexPath.row == loanData.activeLoan.count + 1 {
                 return 45.0
             } else {
-                return 115.0
+                return 100.0
             }
         } else {
             return 0.0
@@ -104,7 +104,7 @@ extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
             if indexPath.row == 0 {
 
             } else if indexPath.row <= loanData.activeLoan.count  {
-                cell.loan = loanData.activeLoan[indexPath.row - 1]
+                sendToLoanDetailViewController(loan: loanData.activeLoan[indexPath.row - 1])
             }
         }
     }

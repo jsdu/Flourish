@@ -11,4 +11,13 @@ import UIKit
 
 class LoanHeaderCell: UITableViewCell {
 
+    @IBOutlet weak var gradientView: EZYGradientView!
+
+    override func layoutSubviews() {
+        gradientView.firstColor = Theme.lightBlue
+        gradientView.secondColor = Theme.darkBlue
+        gradientView.angleº = 70
+        gradientView.fadeIntensity = 1
+        gradientView.colorRatio = 0.5
+    }
 }
