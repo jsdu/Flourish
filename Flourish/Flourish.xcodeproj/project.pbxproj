@@ -39,6 +39,9 @@
 		39C577AB1F9C4AEC002EA512 /* AddLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */; };
 		39C577AF1F9C5E43002EA512 /* AddLoanHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577AE1F9C5E43002EA512 /* AddLoanHeaderCell.swift */; };
 		39C577B11F9C5E53002EA512 /* AddLoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577B01F9C5E53002EA512 /* AddLoanCell.swift */; };
+		39CE837F1F9CB82A00AE0F60 /* LoanDetailsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CE837E1F9CB82A00AE0F60 /* LoanDetailsHeaderCell.swift */; };
+		39CE83811F9CB83900AE0F60 /* LoanDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CE83801F9CB83900AE0F60 /* LoanDetailsCell.swift */; };
+		39CE83831F9CB85400AE0F60 /* LoanDetailsUnscheduledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CE83821F9CB85400AE0F60 /* LoanDetailsUnscheduledCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +79,9 @@
 		39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanViewController.swift; sourceTree = "<group>"; };
 		39C577AE1F9C5E43002EA512 /* AddLoanHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanHeaderCell.swift; sourceTree = "<group>"; };
 		39C577B01F9C5E53002EA512 /* AddLoanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanCell.swift; sourceTree = "<group>"; };
+		39CE837E1F9CB82A00AE0F60 /* LoanDetailsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailsHeaderCell.swift; sourceTree = "<group>"; };
+		39CE83801F9CB83900AE0F60 /* LoanDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailsCell.swift; sourceTree = "<group>"; };
+		39CE83821F9CB85400AE0F60 /* LoanDetailsUnscheduledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailsUnscheduledCell.swift; sourceTree = "<group>"; };
 		3BD2B171AC416824913249C5 /* Pods-Flourish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.release.xcconfig"; sourceTree = "<group>"; };
 		8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flourish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -231,6 +237,9 @@
 		39C577A91F9C48F3002EA512 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				39CE837E1F9CB82A00AE0F60 /* LoanDetailsHeaderCell.swift */,
+				39CE83801F9CB83900AE0F60 /* LoanDetailsCell.swift */,
+				39CE83821F9CB85400AE0F60 /* LoanDetailsUnscheduledCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -397,8 +406,10 @@
 				39C577961F9C37DD002EA512 /* Helper.swift in Sources */,
 				3920C7491F9C977F00586CC6 /* AddLoanConfirmationHeaderCell.swift in Sources */,
 				392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */,
+				39CE837F1F9CB82A00AE0F60 /* LoanDetailsHeaderCell.swift in Sources */,
 				39C577AB1F9C4AEC002EA512 /* AddLoanViewController.swift in Sources */,
 				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
+				39CE83811F9CB83900AE0F60 /* LoanDetailsCell.swift in Sources */,
 				39C577A41F9C3DCA002EA512 /* ViewAnimator.swift in Sources */,
 				39C577A31F9C3DC7002EA512 /* Utilities.swift in Sources */,
 				39C577AF1F9C5E43002EA512 /* AddLoanHeaderCell.swift in Sources */,
@@ -419,6 +430,7 @@
 				39C577A71F9C3DD6002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				39C5779A1F9C3829002EA512 /* EZYGradientView.swift in Sources */,
 				39BEADB71F9C2BE30011D878 /* Network.swift in Sources */,
+				39CE83831F9CB85400AE0F60 /* LoanDetailsUnscheduledCell.swift in Sources */,
 				39C577A01F9C3DC1002EA512 /* Animation.swift in Sources */,
 				392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */,
 				39C577B11F9C5E53002EA512 /* AddLoanCell.swift in Sources */,
