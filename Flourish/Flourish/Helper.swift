@@ -12,6 +12,8 @@ import UIKit
 enum Theme {
     static let darkBlue = UIColor(red: 0.349, green: 0.561, blue: 0.878, alpha: 1.00)
     static let lightBlue = UIColor(red: 0.416, green: 0.733, blue: 0.847, alpha: 1.00)
+    static let red = UIColor(red: 0.773, green: 0.322, blue: 0.322, alpha: 1.00)
+    static let green = UIColor(red: 0.220, green: 0.553, blue: 0.341, alpha: 1.00)
 }
 
 class GradientNavBar {

@@ -12,8 +12,7 @@ import UIKit
 class LoanViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    let loanInProgressArr = ["",""]
-    let loanCompleteArr = ["","",""]
+    var loanData: LoanData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +23,14 @@ class LoanViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        Network.createUser(success: { _ in
-            print("LOL")
+        Network.getData(success: { (model: Any?) in
+            if let loanData = model as? LoanData {
+                self.loanData = loanData
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         })
-        tableView.reloadData()
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
@@ -38,41 +41,57 @@ class LoanViewController: UIViewController {
 extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return loanInProgressArr.count + loanCompleteArr.count + 2
+        if let loanData = loanData {
+            return loanData.activeLoan.count + loanData.completedLoan.count + 2
+        } else {
+            return 0
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDashBoardCell") as! LoanDashBoardCell
-            cell.delegate = self
-            return cell
-        } else if indexPath.row <= loanInProgressArr.count  {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LoanInProgressCell") as! LoanInProgressCell
-            return cell
-        } else if indexPath.row == loanInProgressArr.count + 1 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LoanHeaderCell") as! LoanHeaderCell
-            return cell
+        if let loanData = loanData {
+            if indexPath.row == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDashBoardCell") as! LoanDashBoardCell
+                cell.delegate = self
+                return cell
+            } else if indexPath.row <= loanData.activeLoan.count  {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanInProgressCell") as! LoanInProgressCell
+                return cell
+            } else if indexPath.row == loanData.activeLoan.count + 1 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanHeaderCell") as! LoanHeaderCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanCompleteCell") as! LoanCompleteCell
+                return cell
+            }
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LoanCompleteCell") as! LoanCompleteCell
-            return cell
+            return UITableViewCell()
         }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 0 {
-            return 220.0
-        } else if indexPath.row <= loanInProgressArr.count  {
-            return 250.0
-        } else if indexPath.row == loanInProgressArr.count + 1 {
-            return 45.0
+        if let loanData = loanData {
+            if indexPath.row == 0 {
+                return 220.0
+            } else if indexPath.row <= loanData.activeLoan.count  {
+                return 250.0
+            } else if indexPath.row == loanData.activeLoan.count + 1 {
+                return 45.0
+            } else {
+                return 115.0
+            }
         } else {
-            return 115.0
+            return 0.0
         }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
-        } else if indexPath.row <= loanInProgressArr.count  {
+        if let loanData = loanData {
+            if indexPath.row == 0 {
+
+            } else if indexPath.row <= loanData.activeLoan.count  {
+
+            }
         }
     }
 }

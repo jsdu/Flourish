@@ -10,5 +10,8 @@ import Foundation
 import UIKit
 
 class AddLoanConfirmationViewController: UIViewController {
-    
+
+    override func viewDidLoad() {
+        
+    }
 }
