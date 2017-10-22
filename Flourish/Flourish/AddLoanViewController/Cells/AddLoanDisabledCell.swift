@@ -11,4 +11,10 @@ import UIKit
 
 class AddLoanDisabledCell: UITableViewCell {
     
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var dateLabel: UILabel!
+
+    override func layoutSubviews() {
+        cardView.layer.cornerRadius = cardView.frame.height / 2
+    }
 }

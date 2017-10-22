@@ -17,18 +17,7 @@ open class Network {
     static let base = "http://ec2-18-221-49-193.us-east-2.compute.amazonaws.com/graphql"
     static let header: HTTPHeaders = ["Content-Type": "application/graphql"]
     open class func createUser(success: @escaping SuccessBlock) {
-//        Alamofire.request(base) { result in
-//            switch result {
-//            case .success(let response):
-//                let json = JSON(response.data)
-//                guard let userId = json[Param.id].int else { return }
-//                let defaults = UserDefaults.standard
-//                defaults.set(userId, forKey: "user_id")
-//                success(true)
-//            case .failure(let error):
-//                failure(error)
-//            }
-        let parameters: Parameters = ["query": "{ user(id: 1337) { firstName favoriteAminal } }"]
+        let parameters: Parameters = ["query": "{ me(userId: \"137\") { firstName lastName trust activeLoans { amount slots { netAmount loanStatus settleReason settleBy settledOn settledWith settlementHash } startDate purpose } pastLoans { amount slots { netAmount loanStatus settleReason settleBy settledOn settledWith settlementHash } startDate purpose } } }"]
 
         Alamofire.request(base, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
             print(response)

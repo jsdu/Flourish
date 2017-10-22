@@ -13,11 +13,14 @@ class AddLoanCell: UITableViewCell {
     
     @IBOutlet weak var gradientView: EZYGradientView!
 
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func layoutSubviews() {
         gradientView.firstColor = Theme.lightBlue
         gradientView.secondColor = Theme.darkBlue
         gradientView.angleº = 70
         gradientView.fadeIntensity = 1
         gradientView.colorRatio = 0.5
+        gradientView.layer.cornerRadius = gradientView.frame.height / 2
     }
 }

@@ -911,7 +911,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TnF-XC-taK">
                                 <rect key="frame" x="0.0" y="140" width="375" height="463"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddLoanHeaderCell" rowHeight="60" id="QNp-KG-7oN" customClass="AddLoanHeaderCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
@@ -942,7 +942,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="ccO-Mo-hgT" secondAttribute="trailing" constant="8" id="yFL-fi-roW"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddLoanCell" rowHeight="60" id="lrG-c2-CZo" customClass="AddLoanCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="88" width="375" height="60"/>
@@ -951,7 +951,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH0-cw-CcS" customClass="EZYGradientView" customModule="Flourish" customModuleProvider="target">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NH0-cw-CcS" customClass="EZYGradientView" customModule="Flourish" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="359" height="43.5"/>
                                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
@@ -971,8 +971,9 @@
                                                 <constraint firstItem="NH0-cw-CcS" firstAttribute="leading" secondItem="gSA-uf-x8z" secondAttribute="leading" constant="8" id="zjS-Eg-BE7"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="dateLabel" destination="YwA-L5-qAs" id="975-4S-VFA"/>
                                             <outlet property="gradientView" destination="NH0-cw-CcS" id="GnS-UQ-SCs"/>
                                         </connections>
                                     </tableViewCell>
@@ -983,9 +984,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-1t-j87">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-1t-j87">
                                                     <rect key="frame" x="8" y="8" width="359" height="43.5"/>
-                                                    <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 24 - Nov 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-83-0D3">
                                                     <rect key="frame" x="136.5" y="21" width="102.5" height="18"/>
@@ -1003,9 +1004,17 @@
                                                 <constraint firstItem="iVK-83-0D3" firstAttribute="centerY" secondItem="5CV-1t-j87" secondAttribute="centerY" id="qVx-U4-xSC"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="cardView" destination="5CV-1t-j87" id="5Vs-xN-kip"/>
+                                            <outlet property="dateLabel" destination="iVK-83-0D3" id="Ni4-3p-JhG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VT5-JC-Hze" id="KgB-ED-kBO"/>
+                                    <outlet property="delegate" destination="VT5-JC-Hze" id="6ph-Xt-dql"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8I-V1-Aos">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
@@ -1060,7 +1069,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Loan Amount"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-N1-qRO">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pue-N1-qRO">
                                 <rect key="frame" x="90" y="543" width="195" height="40"/>
                                 <color key="backgroundColor" red="0.30588235289999999" green="0.5568627451" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1086,7 +1095,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="894-de-3BK" firstAttribute="leading" secondItem="08e-XW-muL" secondAttribute="leading" constant="16" id="6DI-0e-9Zy"/>
                             <constraint firstItem="08e-XW-muL" firstAttribute="trailing" secondItem="TnF-XC-taK" secondAttribute="trailing" id="7D3-QB-Ycq"/>
@@ -1119,7 +1128,8 @@
                         <outlet property="purposeTextField" destination="894-de-3BK" id="U6h-1c-XHM"/>
                         <outlet property="searchButton" destination="Pue-N1-qRO" id="zK0-ab-NTb"/>
                         <outlet property="startingDateTextField" destination="1rq-LT-LV4" id="dkU-OU-y2L"/>
-                        <segue destination="hJD-8r-fl1" kind="show" id="Zpq-g5-s9g"/>
+                        <outlet property="tableView" destination="TnF-XC-taK" id="RP7-LF-Oaj"/>
+                        <segue destination="hJD-8r-fl1" kind="show" identifier="toAddLoanConfirmationViewController" id="Zpq-g5-s9g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KnC-tV-SL2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1244,10 +1254,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- $50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEz-JV-ehd">
+                                                    <rect key="frame" x="320" y="12" width="46.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                    <color key="textColor" red="0.82745098039999998" green="0.28235294119999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nGN-Gd-j8m" firstAttribute="leading" secondItem="n0Y-UB-aVT" secondAttribute="leading" constant="8" id="Fow-8s-mWd"/>
+                                                <constraint firstAttribute="trailing" secondItem="oEz-JV-ehd" secondAttribute="trailing" constant="8.5" id="Jwq-r6-kCd"/>
                                                 <constraint firstItem="nGN-Gd-j8m" firstAttribute="centerY" secondItem="n0Y-UB-aVT" secondAttribute="centerY" id="eS3-vG-q3E"/>
+                                                <constraint firstItem="oEz-JV-ehd" firstAttribute="centerY" secondItem="n0Y-UB-aVT" secondAttribute="centerY" id="qEo-5X-O48"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
