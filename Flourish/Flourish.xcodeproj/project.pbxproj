@@ -31,6 +31,7 @@
 		39C577A61F9C3DD3002EA512 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779C1F9C398E002EA512 /* SkyFloatingLabelTextField.swift */; };
 		39C577A71F9C3DD6002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
 		39C577A81F9C3DD8002EA512 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */; };
+		39C577AB1F9C4AEC002EA512 /* AddLoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		39C5779C1F9C398E002EA512 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
 		39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanViewController.swift; sourceTree = "<group>"; };
 		3BD2B171AC416824913249C5 /* Pods-Flourish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.release.xcconfig"; sourceTree = "<group>"; };
 		8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flourish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 		392545EC1F9C1DDF0093709E /* LoanDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				39C577A91F9C48F3002EA512 /* Cells */,
 				39C577931F9C374C002EA512 /* LoanDetailViewController.swift */,
 			);
 			path = LoanDetailViewController;
@@ -141,6 +144,7 @@
 				39AF82691F9BD24F00000706 /* Main.storyboard */,
 				392545E01F9C00810093709E /* LoanViewController */,
 				392545EC1F9C1DDF0093709E /* LoanDetailViewController */,
+				39C577AC1F9C4AF3002EA512 /* AddLoanViewController */,
 				39AF826C1F9BD24F00000706 /* Assets.xcassets */,
 				39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */,
 				39AF82711F9BD24F00000706 /* Info.plist */,
@@ -188,6 +192,21 @@
 				39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */,
 			);
 			path = FloatingTextField;
+			sourceTree = "<group>";
+		};
+		39C577A91F9C48F3002EA512 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		39C577AC1F9C4AF3002EA512 /* AddLoanViewController */ = {
+			isa = PBXGroup;
+			children = (
+				39C577AA1F9C4AEC002EA512 /* AddLoanViewController.swift */,
+			);
+			path = AddLoanViewController;
 			sourceTree = "<group>";
 		};
 		58EDA8C4FCF6D3E502190FAB /* Frameworks */ = {
@@ -332,6 +351,7 @@
 			files = (
 				39C577961F9C37DD002EA512 /* Theme.swift in Sources */,
 				392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */,
+				39C577AB1F9C4AEC002EA512 /* AddLoanViewController.swift in Sources */,
 				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
 				39C577A41F9C3DCA002EA512 /* ViewAnimator.swift in Sources */,
 				39C577A31F9C3DC7002EA512 /* Utilities.swift in Sources */,

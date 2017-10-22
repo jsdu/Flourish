@@ -32,6 +32,7 @@ class LoanViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
     }
+    
 }
 
 extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
@@ -43,6 +44,7 @@ extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDashBoardCell") as! LoanDashBoardCell
+            cell.delegate = self
             return cell
         } else if indexPath.row <= loanInProgressArr.count  {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LoanInProgressCell") as! LoanInProgressCell
@@ -72,6 +74,17 @@ extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
         } else if indexPath.row <= loanInProgressArr.count  {
         }
+    }
+}
+
+extension LoanViewController: loanCellDelegate {
+    func addLoan() {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "AddLoanViewController")
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+
+        self.present(navigationController, animated: true, completion: nil)
     }
 }
 

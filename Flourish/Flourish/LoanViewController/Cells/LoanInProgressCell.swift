@@ -41,3 +41,4 @@ class LoanInProgressCell: UITableViewCell {
         circle5.layer.cornerRadius = circle5.frame.width / 2
     }
 }
+
