@@ -14,6 +14,13 @@ struct AddLoanData {
     var locked: Bool
 }
 
+struct DataSend {
+    var purpose: String?
+    var loanAmount: String?
+    var selectedIndex: Int?
+    var tableArr: [AddLoanData]?
+}
+
 class AddLoanViewController: UIViewController {
 
     @IBOutlet weak var cardView: UIView!
@@ -75,6 +82,13 @@ class AddLoanViewController: UIViewController {
         UIView.transition(with: tableView, duration: 1.0, options: .transitionCrossDissolve, animations: {self.tableView.reloadData()}, completion: nil)
         searchButton.isUserInteractionEnabled = false
 
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toAddLoanConfirmationViewController" {
+            let controller = segue.destination as! AddLoanConfirmationViewController
+            controller.data = DataSend(purpose: purposeTextField.text, loanAmount: loanAmountTextField.text, selectedIndex: selectInt, tableArr: tableArr)
+        }
     }
 
     func sendToConfirmationVC(selectedInt: Int) {

@@ -11,6 +11,8 @@
 		3920C7421F9C61C100586CC6 /* AddLoanDisabledCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920C7411F9C61C100586CC6 /* AddLoanDisabledCell.swift */; };
 		3920C7451F9C655700586CC6 /* AddLoanConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920C7441F9C655700586CC6 /* AddLoanConfirmationViewController.swift */; };
 		3920C7471F9C7E6D00586CC6 /* LoanData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920C7461F9C7E6D00586CC6 /* LoanData.swift */; };
+		3920C7491F9C977F00586CC6 /* AddLoanConfirmationHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920C7481F9C977F00586CC6 /* AddLoanConfirmationHeaderCell.swift */; };
+		3920C74C1F9C983300586CC6 /* AddLoanConfirmationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3920C74B1F9C983300586CC6 /* AddLoanConfirmationCell.swift */; };
 		392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545DE1F9C007C0093709E /* LoanViewController.swift */; };
 		392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545E21F9C00E80093709E /* LoanInProgressCell.swift */; };
 		392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392545E51F9C01020093709E /* LoanDashBoardCell.swift */; };
@@ -44,6 +46,8 @@
 		3920C7411F9C61C100586CC6 /* AddLoanDisabledCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanDisabledCell.swift; sourceTree = "<group>"; };
 		3920C7441F9C655700586CC6 /* AddLoanConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanConfirmationViewController.swift; sourceTree = "<group>"; };
 		3920C7461F9C7E6D00586CC6 /* LoanData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanData.swift; sourceTree = "<group>"; };
+		3920C7481F9C977F00586CC6 /* AddLoanConfirmationHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanConfirmationHeaderCell.swift; sourceTree = "<group>"; };
+		3920C74B1F9C983300586CC6 /* AddLoanConfirmationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanConfirmationCell.swift; sourceTree = "<group>"; };
 		392545DE1F9C007C0093709E /* LoanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanViewController.swift; sourceTree = "<group>"; };
 		392545E21F9C00E80093709E /* LoanInProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanInProgressCell.swift; sourceTree = "<group>"; };
 		392545E51F9C01020093709E /* LoanDashBoardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDashBoardCell.swift; sourceTree = "<group>"; };
@@ -91,9 +95,19 @@
 		3920C7431F9C653B00586CC6 /* AddLoanConfirmationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3920C74A1F9C978900586CC6 /* Cells */,
 				3920C7441F9C655700586CC6 /* AddLoanConfirmationViewController.swift */,
 			);
 			path = AddLoanConfirmationViewController;
+			sourceTree = "<group>";
+		};
+		3920C74A1F9C978900586CC6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3920C7481F9C977F00586CC6 /* AddLoanConfirmationHeaderCell.swift */,
+				3920C74B1F9C983300586CC6 /* AddLoanConfirmationCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		392545E01F9C00810093709E /* LoanViewController */ = {
@@ -381,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39C577961F9C37DD002EA512 /* Helper.swift in Sources */,
+				3920C7491F9C977F00586CC6 /* AddLoanConfirmationHeaderCell.swift in Sources */,
 				392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */,
 				39C577AB1F9C4AEC002EA512 /* AddLoanViewController.swift in Sources */,
 				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
@@ -399,6 +414,7 @@
 				39C577A21F9C3DC5002EA512 /* Direction.swift in Sources */,
 				3920C7421F9C61C100586CC6 /* AddLoanDisabledCell.swift in Sources */,
 				39C5779F1F9C3DBE002EA512 /* Animatable.swift in Sources */,
+				3920C74C1F9C983300586CC6 /* AddLoanConfirmationCell.swift in Sources */,
 				39C577941F9C374C002EA512 /* LoanDetailViewController.swift in Sources */,
 				39C577A71F9C3DD6002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
 				39C5779A1F9C3829002EA512 /* EZYGradientView.swift in Sources */,
