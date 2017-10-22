@@ -13,7 +13,11 @@ class LoanCompleteCell: UITableViewCell {
 
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var headerView: UIView!
-
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var paymentLabel: UILabel!
+    @IBOutlet weak var purposeLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func layoutSubviews() {
         cardView.layer.cornerRadius = 10
         cardView.layer.shadowRadius = 2

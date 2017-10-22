@@ -39,7 +39,7 @@ extension AddLoanConfirmationViewController: UITableViewDelegate, UITableViewDat
             if indexPath.row == 0 {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "AddLoanConfirmationHeaderCell") as! AddLoanConfirmationHeaderCell
                 cell.purposeLabel.text = data.purpose!
-                cell.dateLabel.text = ""
+                cell.dateLabel.text = "Oct 23 - Nov 31"
                 cell.paymentLabel.text = data.loanAmount!
                 return cell
             } else {
@@ -47,8 +47,10 @@ extension AddLoanConfirmationViewController: UITableViewDelegate, UITableViewDat
 
                 if indexPath.row == 3 {
                     cell.amountLabel.text = "+ $200.00"
+                    cell.amountLabel.textColor = Theme.green
                 } else {
                     cell.amountLabel.text = "- $50.00"
+                    cell.amountLabel.textColor = Theme.red
                 }
 
                 cell.dateLabel.text = tableArr[indexPath.row - 1].date

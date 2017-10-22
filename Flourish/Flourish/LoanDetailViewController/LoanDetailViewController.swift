@@ -11,6 +11,8 @@ import UIKit
 
 class LoanDetailViewController: UIViewController {
 
+    var data: Loan?
+    
     override func viewDidLoad() {
     }
 }

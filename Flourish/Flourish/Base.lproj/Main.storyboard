@@ -471,7 +471,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cardView" destination="RrU-IV-LbK" id="hsA-aN-6NB"/>
+                                            <outlet property="dateLabel" destination="hLS-mV-PFc" id="odJ-l7-01A"/>
+                                            <outlet property="descriptionLabel" destination="M0k-f4-teX" id="NKd-UR-WwC"/>
                                             <outlet property="headerView" destination="mVM-xB-Bk4" id="y7p-e7-Fcj"/>
+                                            <outlet property="paymentLabel" destination="iD0-gq-XID" id="hz4-uh-ybg"/>
+                                            <outlet property="purposeLabel" destination="vjk-WL-Na7" id="ZOP-tO-G2z"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -986,7 +990,20 @@
                                             <subviews>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CV-1t-j87">
                                                     <rect key="frame" x="8" y="8" width="359" height="43.5"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="padlock" translatesAutoresizingMaskIntoConstraints="NO" id="PL3-bP-Ha2">
+                                                            <rect key="frame" x="328" y="14" width="15" height="15"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="15" id="XJL-8B-uDI"/>
+                                                                <constraint firstAttribute="height" constant="15" id="q8G-g0-6wc"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="0.82352941180000006" green="0.82352941180000006" blue="0.82352941180000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="PL3-bP-Ha2" secondAttribute="trailing" constant="16" id="Zzt-sb-wBI"/>
+                                                        <constraint firstItem="PL3-bP-Ha2" firstAttribute="centerY" secondItem="5CV-1t-j87" secondAttribute="centerY" id="y8h-84-ida"/>
+                                                    </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 24 - Nov 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iVK-83-0D3">
                                                     <rect key="frame" x="136.5" y="21" width="102.5" height="18"/>
@@ -1324,4 +1341,7 @@
             <point key="canvasLocation" x="201" y="-923"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="padlock" width="128" height="128"/>
+    </resources>
 </document>

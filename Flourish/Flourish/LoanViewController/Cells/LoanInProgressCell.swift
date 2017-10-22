@@ -28,6 +28,8 @@ class LoanInProgressCell: UITableViewCell {
     @IBOutlet weak var circle4: UIView!
     @IBOutlet weak var circle5: UIView!
 
+    var loan: Loan?
+
     override func layoutSubviews() {
         cardView.layer.cornerRadius = 10
         cardView.layer.shadowRadius = 2
@@ -39,6 +41,31 @@ class LoanInProgressCell: UITableViewCell {
         circle3.layer.cornerRadius = circle3.frame.width / 2
         circle4.layer.cornerRadius = circle4.frame.width / 2
         circle5.layer.cornerRadius = circle5.frame.width / 2
+
+        if let loan = loan {
+            nameLabel.text = loan.purpose
+            loanAmountLabel.text = "$\(loan.amount).00"
+            configureView(view: circle1, loanStatus: loan.slots[0].loanStatus, netAmount: loan.slots[0].netAmount)
+            configureView(view: circle2, loanStatus: loan.slots[1].loanStatus, netAmount: loan.slots[1].netAmount)
+            configureView(view: circle3, loanStatus: loan.slots[2].loanStatus, netAmount: loan.slots[2].netAmount)
+            configureView(view: circle4, loanStatus: loan.slots[3].loanStatus, netAmount: loan.slots[3].netAmount)
+            configureView(view: circle5, loanStatus: loan.slots[4].loanStatus, netAmount: loan.slots[4].netAmount)
+
+        }
+    }
+
+    func configureView(view: UIView, loanStatus: String?, netAmount: Int) {
+        if let loanStatus = loanStatus {
+            if loanStatus == "COMPLETED" {
+                view.backgroundColor = UIColor.lightGray
+            } else if netAmount < 0 {
+                view.backgroundColor = Theme.red
+            } else {
+                view.backgroundColor = Theme.green
+            }
+        } else {
+            view.backgroundColor = UIColor.lightGray
+        }
     }
 }
 
