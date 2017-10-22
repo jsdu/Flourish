@@ -30,7 +30,7 @@ class LoanDetailViewController: UIViewController {
                 if isPayment(slot: slot) {
                     paymentIndex = index
                     if isComplete(slot: slot) {
-                        offset = 4
+                        offset = 3
                     } else {
                         offset = 0
                     }
@@ -39,7 +39,7 @@ class LoanDetailViewController: UIViewController {
                     paymentIndex = index
                     if let status = slot.loanStatus {
                         if status == "COMPLETED" {
-                            offset = 4
+                            offset = 3
                         } else {
                             offset = 0
                         }
@@ -47,8 +47,6 @@ class LoanDetailViewController: UIViewController {
                 }
                 index += 1
             }
-            print(paymentIndex)
-            print(offset)
             self.title = data.purpose
         }
     }
@@ -62,6 +60,8 @@ class LoanDetailViewController: UIViewController {
         if let slot = slot {
             if let status = slot.loanStatus {
                 if status == "COMPLETED" {
+                    return true
+                } else if let _ = slot.settlementHash {
                     return true
                 }
             }
@@ -122,7 +122,8 @@ extension LoanDetailViewController: UITableViewDelegate, UITableViewDataSource {
                     cell.weekLabel.text = "Week \(indexPath.row + 1)"
                     return cell
                 }
-        } else if indexPath.row < paymentIndex + offset {
+        } else if indexPath.row <= paymentIndex + offset  {
+                print("indexPath.row < paymentIndex + offset \(indexPath.row)")
                 if isComplete(slot: data.slots[paymentIndex]) {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsCell") as! LoanDetailsCell
                     cell.slot = data.slots[paymentIndex]

@@ -23,6 +23,8 @@ class LoanDetailsHeaderCell: UITableViewCell {
 
     override func layoutSubviews() {
         if let slot = slot {
+            circleView.layer.cornerRadius = circleView.frame.height / 2
+            circleView.clipsToBounds = true
             payButton.layer.cornerRadius = payButton.frame.height / 2
             if let loanStatus = slot.loanStatus {
                 if loanStatus == "COMPLETED" {
@@ -35,7 +37,7 @@ class LoanDetailsHeaderCell: UITableViewCell {
                     payButton.setTitleColor(Theme.darkBlue, for: .normal)
                 } else {
                     payButton.backgroundColor = Theme.darkBlue
-                    payButton.setTitle("Accepted", for: .normal)
+                    payButton.setTitle("Accept", for: .normal)
                     payButton.setTitleColor(UIColor.white, for: .normal)
                 }
             }
