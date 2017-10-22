@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JVb-WT-McH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hyd-gR-08j">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,22 +11,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="nXj-DI-ah1">
-            <objects>
-                <viewController id="A5V-B4-lLG" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BKQ-tn-f1t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="Fyg-hT-jmL"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="jK3-0P-LJv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rEw-SH-n9B" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="198" y="675"/>
-        </scene>
         <!--Loan View Controller-->
         <scene sceneID="5rA-TB-qfv">
             <objects>
@@ -36,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wGn-Ph-XYl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="951"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDashBoardCell" rowHeight="210" id="eLF-vP-XVp" customClass="LoanDashBoardCell" customModule="Flourish" customModuleProvider="target">
@@ -515,24 +499,6 @@
             </objects>
             <point key="canvasLocation" x="197.59999999999999" y="-93.553223388305852"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="lxg-ve-wlQ">
-            <objects>
-                <tabBarController id="JVb-WT-McH" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FZY-af-4re">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="Hyd-gR-08j" kind="relationship" relationship="viewControllers" id="DXe-gu-df4"/>
-                        <segue destination="RAa-Mx-0zE" kind="relationship" relationship="viewControllers" id="0eh-0c-a5D"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QcQ-b7-HpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1487" y="344"/>
-        </scene>
         <!--Item 1-->
         <scene sceneID="PSk-3V-P6e">
             <objects>
@@ -556,25 +522,6 @@
             </objects>
             <point key="canvasLocation" x="-539.20000000000005" y="11.694152923538232"/>
         </scene>
-        <!--Item 2-->
-        <scene sceneID="vyn-u2-YqI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RAa-Mx-0zE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Jp8-V5-ZR7"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kCR-6l-nQd">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="A5V-B4-lLG" kind="relationship" relationship="rootViewController" id="gKC-ec-7mP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cvk-5l-OIM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-539.20000000000005" y="675.56221889055473"/>
-        </scene>
         <!--Loan Detail View Controller-->
         <scene sceneID="o8o-7C-roG">
             <objects>
@@ -584,14 +531,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wM9-ff-G80">
-                                <rect key="frame" x="18" y="64" width="1" height="554"/>
+                                <rect key="frame" x="18" y="64" width="1" height="603"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="1" id="wQK-8X-iOY"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0PT-4Z-DUv">
-                                <rect key="frame" x="-0.5" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="-0.5" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDetailsHeaderCell" rowHeight="190" id="6Eo-dj-Y1m" customClass="LoanDetailsHeaderCell" customModule="Flourish" customModuleProvider="target">
@@ -609,7 +556,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="wbk-n7-ycl"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfX-po-OdW">
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QfX-po-OdW">
                                                     <rect key="frame" x="14" y="32" width="10" height="10"/>
                                                     <color key="backgroundColor" red="0.82745098039999998" green="0.28235294119999998" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -712,6 +659,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="circleView" destination="QfX-po-OdW" id="dAR-QV-j0H"/>
+                                            <outlet property="date" destination="vPD-Bf-DDe" id="Kek-39-e2T"/>
+                                            <outlet property="descriptionLabel" destination="GQW-Zp-jIU" id="x12-ju-a35"/>
+                                            <outlet property="name" destination="hLG-K8-I6e" id="4xV-Sq-Vpr"/>
+                                            <outlet property="netAmount" destination="S1b-oQ-ff8" id="bf9-MT-WqV"/>
+                                            <outlet property="payButton" destination="oYR-gd-ryL" id="vii-ua-AKA"/>
+                                            <outlet property="profilePicture" destination="IkU-B1-fmu" id="TMD-Ff-sk6"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDetailsCell" rowHeight="150" id="Bug-xe-Ucc" customClass="LoanDetailsCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="218" width="375" height="150"/>
@@ -803,6 +759,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="acceptButton" destination="6Q2-u2-H5B" id="SB7-0j-QoU"/>
+                                            <outlet property="dateLabel" destination="XUN-TM-cGY" id="rqo-5r-OOZ"/>
+                                            <outlet property="descriptionLabel" destination="Zvf-eD-LQH" id="aPv-Zu-nph"/>
+                                            <outlet property="nameLabel" destination="EWn-Z5-tJP" id="0YT-Wn-Vfx"/>
+                                            <outlet property="payAmountLabel" destination="kP4-e9-mol" id="QuW-Te-GhB"/>
+                                            <outlet property="profilePicture" destination="kW1-6T-8sz" id="rRW-Dx-naE"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDetailsUnscheduledCell" rowHeight="120" id="ZgE-zG-VYc" customClass="LoanDetailsUnscheduledCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="368" width="375" height="120"/>
@@ -891,6 +855,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="circleView" destination="plY-D8-LAA" id="cwf-yq-paC"/>
+                                            <outlet property="dateLabel" destination="cl4-pm-Cmo" id="x4y-Yc-0Tc"/>
+                                            <outlet property="descriptionLabel" destination="HAC-VA-hc2" id="ISr-ZK-O0B"/>
+                                            <outlet property="netAmount" destination="suW-XW-KUb" id="vZF-Qf-xIX"/>
+                                            <outlet property="weekLabel" destination="P2u-bW-ZTv" id="JtE-TR-bKw"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

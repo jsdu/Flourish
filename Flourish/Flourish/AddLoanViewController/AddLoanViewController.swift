@@ -34,7 +34,7 @@ class AddLoanViewController: UIViewController {
     let datePicker = UIDatePicker()
     let billingPicker = UIPickerView()
     let loanAmountPicker = UIPickerView()
-    let loanDataArr = ["$100.00", "$200.00", "$400.00", "$800.00"]
+    let loanDataArr = ["$250.00", "$500.00", "$750.00", "$1000.00"]
 
     var tableArr: [AddLoanData] = []
 

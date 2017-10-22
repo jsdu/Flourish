@@ -11,4 +11,12 @@ import UIKit
 
 class LoanDetailsHeaderCell: UITableViewCell {
     
+    @IBOutlet weak var circleView: UIView!
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var date: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var netAmount: UILabel!
+    @IBOutlet weak var payButton: UIButton!
+
 }

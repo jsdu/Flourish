@@ -32,7 +32,7 @@ class LoanDetailViewController: UIViewController {
                     if isComplete(slot: slot) {
                         offset = 4
                     } else {
-                        offset = 1
+                        offset = 0
                     }
                 }
                 if slot.netAmount > 0 {
@@ -41,7 +41,7 @@ class LoanDetailViewController: UIViewController {
                         if status == "COMPLETED" {
                             offset = 4
                         } else {
-                            offset = 1
+                            offset = 0
                         }
                     }
                 }
@@ -103,7 +103,7 @@ extension LoanDetailViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row < paymentIndex {
             if !isComplete(slot: data.slots[indexPath.row]) {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
-                
+                cell.slot = data.slots[indexPath.row]
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell
@@ -116,20 +116,24 @@ extension LoanDetailViewController: UITableViewDelegate, UITableViewDataSource {
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                    cell.slot = data.slots[indexPath.row]
                     return cell
                 }
             } else {
                 if isComplete(slot: data.slots[paymentIndex]) {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsCell") as! LoanDetailsCell
+                    cell.slot = data.slots[paymentIndex]
                     return cell
                 } else {
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                    cell.slot = data.slots[paymentIndex]
                     return cell
                 }
             }
         } else {
             if !isComplete(slot: data.slots[indexPath.row - offset]) {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                cell.slot = data.slots[indexPath.row - offset]
                 return cell
             } else {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell

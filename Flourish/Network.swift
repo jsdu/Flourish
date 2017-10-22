@@ -101,4 +101,11 @@ open class Network {
         }
     }
 
+    open class func initiateSettlement(success: @escaping SuccessBlock) {
+        let parameters: Parameters = ["query": "{ initiateSettlement(settlementHash:\"66dd370f626c5fda7c8f1680c6c1f100d9a495b6768dfef9d0466506e24a16e9\")}"]
+        Alamofire.request(base, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            success(response)
+        }
+    }
+
 }
