@@ -18,6 +18,9 @@
 		39AF826D1F9BD24F00000706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AF826C1F9BD24F00000706 /* Assets.xcassets */; };
 		39AF82701F9BD24F00000706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */; };
 		39BEADB71F9C2BE30011D878 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39BEADB61F9C2BE30011D878 /* Network.swift */; };
+		39C577941F9C374C002EA512 /* LoanDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577931F9C374C002EA512 /* LoanDetailViewController.swift */; };
+		39C577961F9C37DD002EA512 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577951F9C37DD002EA512 /* Theme.swift */; };
+		39C5779A1F9C3829002EA512 /* EZYGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C577991F9C3829002EA512 /* EZYGradientView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,12 @@
 		39BEADB31F9C2B160011D878 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		39BEADB41F9C2B160011D878 /* AnimationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationType.swift; sourceTree = "<group>"; };
 		39BEADB61F9C2BE30011D878 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		39C577931F9C374C002EA512 /* LoanDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanDetailViewController.swift; sourceTree = "<group>"; };
+		39C577951F9C37DD002EA512 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		39C577991F9C3829002EA512 /* EZYGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZYGradientView.swift; sourceTree = "<group>"; };
+		39C5779C1F9C398E002EA512 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
 		3BD2B171AC416824913249C5 /* Pods-Flourish.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Flourish.release.xcconfig"; path = "Pods/Target Support Files/Pods-Flourish/Pods-Flourish.release.xcconfig"; sourceTree = "<group>"; };
 		8177939F953AF2CEF1CEC658 /* Pods_Flourish.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Flourish.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -80,6 +89,7 @@
 		392545EC1F9C1DDF0093709E /* LoanDetailViewController */ = {
 			isa = PBXGroup;
 			children = (
+				39C577931F9C374C002EA512 /* LoanDetailViewController.swift */,
 			);
 			path = LoanDetailViewController;
 			sourceTree = "<group>";
@@ -87,13 +97,9 @@
 		392545ED1F9C2AB80093709E /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
-				39BEADAE1F9C2B130011D878 /* Animatable.swift */,
-				39BEADB21F9C2B160011D878 /* Animation.swift */,
-				39BEADB41F9C2B160011D878 /* AnimationType.swift */,
-				39BEADB11F9C2B150011D878 /* Direction.swift */,
-				39BEADB31F9C2B160011D878 /* Utilities.swift */,
-				39BEADB01F9C2B150011D878 /* ViewAnimator.swift */,
-				39BEADAF1F9C2B130011D878 /* ViewAnimatorConfig.swift */,
+				39C5779B1F9C395D002EA512 /* FloatingTextField */,
+				39C577981F9C3814002EA512 /* EZYGradientView */,
+				39C577971F9C3807002EA512 /* ViewAnimator */,
 			);
 			path = 3rdParty;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 				39AF826C1F9BD24F00000706 /* Assets.xcassets */,
 				39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */,
 				39AF82711F9BD24F00000706 /* Info.plist */,
+				39C577951F9C37DD002EA512 /* Theme.swift */,
 			);
 			path = Flourish;
 			sourceTree = "<group>";
@@ -139,6 +146,38 @@
 			);
 			name = Network;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		39C577971F9C3807002EA512 /* ViewAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				39BEADAE1F9C2B130011D878 /* Animatable.swift */,
+				39BEADB21F9C2B160011D878 /* Animation.swift */,
+				39BEADB41F9C2B160011D878 /* AnimationType.swift */,
+				39BEADB11F9C2B150011D878 /* Direction.swift */,
+				39BEADB31F9C2B160011D878 /* Utilities.swift */,
+				39BEADB01F9C2B150011D878 /* ViewAnimator.swift */,
+				39BEADAF1F9C2B130011D878 /* ViewAnimatorConfig.swift */,
+			);
+			path = ViewAnimator;
+			sourceTree = "<group>";
+		};
+		39C577981F9C3814002EA512 /* EZYGradientView */ = {
+			isa = PBXGroup;
+			children = (
+				39C577991F9C3829002EA512 /* EZYGradientView.swift */,
+			);
+			path = EZYGradientView;
+			sourceTree = "<group>";
+		};
+		39C5779B1F9C395D002EA512 /* FloatingTextField */ = {
+			isa = PBXGroup;
+			children = (
+				39C5779C1F9C398E002EA512 /* SkyFloatingLabelTextField.swift */,
+				39C5779D1F9C398E002EA512 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				39C5779E1F9C398E002EA512 /* UITextField+fixCaretPosition.swift */,
+			);
+			path = FloatingTextField;
 			sourceTree = "<group>";
 		};
 		58EDA8C4FCF6D3E502190FAB /* Frameworks */ = {
@@ -281,11 +320,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39C577961F9C37DD002EA512 /* Theme.swift in Sources */,
 				392545E91F9C011C0093709E /* LoanHeaderCell.swift in Sources */,
 				392545DF1F9C007C0093709E /* LoanViewController.swift in Sources */,
 				392545EB1F9C013E0093709E /* LoanCompleteCell.swift in Sources */,
 				39AF82661F9BD24F00000706 /* AppDelegate.swift in Sources */,
 				392545E61F9C01020093709E /* LoanDashBoardCell.swift in Sources */,
+				39C577941F9C374C002EA512 /* LoanDetailViewController.swift in Sources */,
+				39C5779A1F9C3829002EA512 /* EZYGradientView.swift in Sources */,
 				39BEADB71F9C2BE30011D878 /* Network.swift in Sources */,
 				392545E31F9C00E80093709E /* LoanInProgressCell.swift in Sources */,
 			);
