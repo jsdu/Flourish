@@ -11,4 +11,9 @@ import UIKit
 
 class LoanDashBoardCell: UITableViewCell {
     
+    @IBOutlet weak var addButton: UIButton!
+
+    override func layoutSubviews() {
+        addButton.layer.cornerRadius = addButton.frame.height / 2
+    }
 }

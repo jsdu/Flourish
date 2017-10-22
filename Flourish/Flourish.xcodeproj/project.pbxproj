@@ -68,6 +68,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		392545EC1F9C1DDF0093709E /* LoanDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LoanDetailViewController;
+			sourceTree = "<group>";
+		};
 		39AF82591F9BD24F00000706 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +99,7 @@
 				39AF82651F9BD24F00000706 /* AppDelegate.swift */,
 				39AF82691F9BD24F00000706 /* Main.storyboard */,
 				392545E01F9C00810093709E /* LoanViewController */,
+				392545EC1F9C1DDF0093709E /* LoanDetailViewController */,
 				39AF826C1F9BD24F00000706 /* Assets.xcassets */,
 				39AF826E1F9BD24F00000706 /* LaunchScreen.storyboard */,
 				39AF82711F9BD24F00000706 /* Info.plist */,

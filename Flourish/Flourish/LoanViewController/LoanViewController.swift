@@ -46,11 +46,11 @@ extension LoanViewController: UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             return 200.0
         } else if indexPath.row <= loanInProgressArr.count  {
-            return 240.0
+            return 250.0
         } else if indexPath.row == loanInProgressArr.count + 1 {
             return 45.0
         } else {
-            return 129.0
+            return 115.0
         }
     }
 
