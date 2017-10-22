@@ -27,54 +27,145 @@ class LoanDetailViewController: UIViewController {
         if let data = data {
             var index = 0
             for slot in data.slots {
+                if isPayment(slot: slot) {
+                    paymentIndex = index
+                    if isComplete(slot: slot) {
+                        offset = 4
+                    } else {
+                        offset = 1
+                    }
+                }
                 if slot.netAmount > 0 {
                     paymentIndex = index
                     if let status = slot.loanStatus {
                         if status == "COMPLETED" {
                             offset = 4
                         } else {
-                            offset = 0
+                            offset = 1
                         }
                     }
                 }
                 index += 1
             }
+            print(paymentIndex)
+            print(offset)
             self.title = data.purpose
         }
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.setBackgroundImage(GradientNavBar.create(size: self.navigationController!.navigationBar.bounds), for: .default)
+        self.navigationController?.navigationBar.isTranslucent = false
+    }
+
+    func isComplete(slot: Slot?) -> Bool {
+        if let slot = slot {
+            if let status = slot.loanStatus {
+                if status == "COMPLETED" {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
+    func isPayment(slot: Slot?) -> Bool {
+        if let slot = slot {
+            if slot.netAmount > 0 {
+                return true
+            }
+        }
+        return false
     }
 }
 
 extension LoanDetailViewController: UITableViewDelegate, UITableViewDataSource {
-    
+    // 8 rows 0 - 7
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var rowCount = 0
         if let data = data {
             for slot in data.slots {
-                if let status = slot.loanStatus {
-                    if status == "COMPLETED" {
-                        if slot.netAmount > 0 {
-                            rowCount += 3
-                        } else {
-                            rowCount += 1
-                        }
-                    } else {
-                        rowCount += 1
-                    }
+                if !isPayment(slot: slot) {
+                    rowCount += 1
+                } else if isComplete(slot: slot) {
+                    rowCount += 4
                 } else {
                     rowCount += 1
                 }
             }
         }
+        print("ROW COUNT: \(rowCount)")
         return rowCount
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let data = data else { return UITableViewCell() }
         if indexPath.row < paymentIndex {
-
-        } else if indexPath.row < paymentIndex + offset {
-
+            if !isComplete(slot: data.slots[indexPath.row]) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell
+                return cell
+            }
+        } else if indexPath.row < paymentIndex + offset && indexPath.row >= paymentIndex {
+            if indexPath.row == paymentIndex {
+                if isComplete(slot: data.slots[indexPath.row]) {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell
+                    return cell
+                } else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                    return cell
+                }
+            } else {
+                if isComplete(slot: data.slots[paymentIndex]) {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsCell") as! LoanDetailsCell
+                    return cell
+                } else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                    return cell
+                }
+            }
+        } else {
+            if !isComplete(slot: data.slots[indexPath.row - offset]) {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsUnscheduledCell") as! LoanDetailsUnscheduledCell
+                return cell
+            } else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "LoanDetailsHeaderCell") as! LoanDetailsHeaderCell
+                return cell
+            }
         }
+    }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let data = data else { return 0.0 }
+        if indexPath.row < paymentIndex {
+            if !isComplete(slot: data.slots[indexPath.row]) {
+                return 120.0
+            } else {
+                return 190.0
+            }
+        } else if indexPath.row < paymentIndex + offset && indexPath.row >= paymentIndex {
+
+            if indexPath.row == paymentIndex {
+                if isComplete(slot: data.slots[indexPath.row]) {
+                    return 190.0
+                } else {
+                    return 120.0
+                }
+            } else {
+                if isComplete(slot: data.slots[paymentIndex]) {
+                    return 150.0
+                } else {
+                    return 120.0
+                }
+            }
+        } else {
+            if !isComplete(slot: data.slots[indexPath.row - offset]) {
+                return 120.0
+            } else {
+                return 190.0
+            }
+        }
     }
 }

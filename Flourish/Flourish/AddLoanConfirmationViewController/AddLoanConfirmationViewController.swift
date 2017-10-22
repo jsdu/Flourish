@@ -21,7 +21,9 @@ class AddLoanConfirmationViewController: UIViewController {
     }
 
     @objc func doneNavBar() {
-        self.dismiss(animated: true, completion: nil)
+        Network.createLoan { (_) in
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
 
@@ -66,7 +68,7 @@ extension AddLoanConfirmationViewController: UITableViewDelegate, UITableViewDat
             if indexPath.row == 0 {
                 return 220.0
             } else {
-                return 40.0
+                return 60.0
             }
         } else {
             return 0.0

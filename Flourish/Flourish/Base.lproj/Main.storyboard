@@ -590,7 +590,7 @@
                                 <rect key="frame" x="-0.5" y="7.5" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TransactionHeaderCell" rowHeight="190" id="6Eo-dj-Y1m" customClass="TransactionHeaderCell" customModule="Flourish" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDetailsHeaderCell" rowHeight="190" id="6Eo-dj-Y1m" customClass="LoanDetailsHeaderCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Eo-dj-Y1m" id="mDW-hL-zUw">
@@ -709,7 +709,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TransactionBodyCell" rowHeight="150" id="Bug-xe-Ucc" customClass="TransactionBodyCell" customModule="Flourish" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDetailsCell" rowHeight="150" id="Bug-xe-Ucc" customClass="LoanDetailsCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="218" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bug-xe-Ucc" id="kj3-d9-hvD">
@@ -800,7 +800,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="120" id="ZgE-zG-VYc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LoanDetailsUnscheduledCell" rowHeight="120" id="ZgE-zG-VYc" customClass="LoanDetailsUnscheduledCell" customModule="Flourish" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="368" width="375" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZgE-zG-VYc" id="J4O-M4-qaA">
@@ -1295,7 +1295,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="nGN-Gd-j8m" firstAttribute="leading" secondItem="n0Y-UB-aVT" secondAttribute="leading" constant="8" id="Fow-8s-mWd"/>
-                                                <constraint firstAttribute="trailing" secondItem="oEz-JV-ehd" secondAttribute="trailing" constant="8.5" id="Jwq-r6-kCd"/>
+                                                <constraint firstAttribute="trailing" secondItem="oEz-JV-ehd" secondAttribute="trailing" constant="8" id="Jwq-r6-kCd"/>
                                                 <constraint firstItem="nGN-Gd-j8m" firstAttribute="centerY" secondItem="n0Y-UB-aVT" secondAttribute="centerY" id="eS3-vG-q3E"/>
                                                 <constraint firstItem="oEz-JV-ehd" firstAttribute="centerY" secondItem="n0Y-UB-aVT" secondAttribute="centerY" id="qEo-5X-O48"/>
                                             </constraints>

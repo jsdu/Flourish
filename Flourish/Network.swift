@@ -89,4 +89,12 @@ open class Network {
         }
     }
 
+    open class func createLoan(success: @escaping SuccessBlock) {
+        let parameters: Parameters = ["query": "mutation createLoan { createLoan }"]
+
+        Alamofire.request(base, method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON { response in
+            success(response)
+        }
+    }
+
 }
